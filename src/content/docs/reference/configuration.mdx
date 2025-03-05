@@ -37,7 +37,7 @@ It can be a fixed string or a translation key to support multiple locales.
 ### `languages`
 
 type: `array` \
-example: `[{ code: "en", label: "English", translations: {}, isDefaultUILanguage: true }]` \
+example: `[{ code: "en", label: "English", translations: {}, isDefaultSiteLanguage: true }]` \
 required: `true`
 
 The languages of your site. This will be used to support multiple locales and content languages.
@@ -48,7 +48,7 @@ type: `string` \
 example: `"en"` \
 required: `true`
 
-The [IETF BCP-47](https://en.wikipedia.org/wiki/IETF_language_tag) code of the language. This code will be used as the language´s identifier.
+The [IETF BCP-47](https://en.wikipedia.org/wiki/IETF_language_tag) code of the language. This code will be used as the language's identifier.
 
 #### `languages.label`
 
@@ -58,23 +58,23 @@ required: `true`
 
 The name of the language. This will be used as the language name in the UI. It can be a fixed string or a translation key to support multiple locales.
 
-#### `languages.isUILanguage`
+#### `languages.isSiteLanguage`
 
 type: `boolean` \
 example: `true` \
 required: `false`
 
-Configure this language to be available as a user interface language. It will show up in the language picker in the menu bar.
-You do not need to set this, if you set `isDefaultUILanguage` to true.
+Configure this language to be available as a site language. It will show up in the language picker in the menu bar.
+You do not need to set this, if you set `isDefaultSiteLanguage` to true.
 
-#### `languages.isDefaultUILanguage`
+#### `languages.isDefaultSiteLanguage`
 
 type: `boolean` \
 example: `true` \
 required: `false`
 
-If you set this to `true`, the language will be used as the default user interface language.
-You must set exactly one language to `true`. The default user interface language is used:
+If you set this to `true`, the language will be used as the default site language.
+You must set exactly one language to `true`. The default site language is used:
 
 - As the fallback language if a translation is not available for the current locale.
 - As the default language when the user navigates to the root URL.
@@ -254,7 +254,7 @@ example: `true` \
 required: `false` \
 default: `false`
 
-If you set this to `true`, the search page will be initially filtered by the current UI language.
+If you set this to `true`, the search page will be initially filtered by the current site language.
 The filter will only be set when there is any media item in the current language.
 
 ## Configure the `decapAdmin` integration
@@ -282,7 +282,7 @@ You can pass the following options to the `decapAdmin` integration:
 ### `languages`
 
 type: `array` \
-example: `[{ code: "en", label: "English", translations: {}, isDefaultUILanguage: true }]` \
+example: `[{ code: "en", label: "English", translations: {}, isDefaultSiteLanguage: true }]` \
 required: `true`
 
 The languages of your site. This will be used to support multiple locales and content languages.
